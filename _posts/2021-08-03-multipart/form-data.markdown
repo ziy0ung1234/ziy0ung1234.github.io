@@ -6,7 +6,6 @@ date:   2021-08-03 22:12:36 +0530
 categories: Django
 ---
 
-# multipart/form-data
 multipart는 MIME type([중요 MIME types](https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types/Common_types))이 각각의 파트로 나누어지는 것을 의미하며 request body에 다양한 Content-type을 담을 때 사용한다. 추가적으로 Content-type 필드에 MIME 타입을 기술해줄 수 있는데, 여러 타입중 하나가 **multipart**이다. `request.FILES['키값']`으로 파일들을 통신할 수 있고 `request.POST['키값']` 으로 json 데이터를 통신할 수 있다.
 
 ## File upload process
