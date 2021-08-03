@@ -34,7 +34,7 @@ categories: Django Python
 ### 1. name-value 형식의 쌍
 - 다양한 언어들에서 object, hashtable, struct로 실현되었다.
 
- &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp`{ String key : String value }`
+`{ String key : String value }`
 
 ```
 {
@@ -47,7 +47,7 @@ _💡**value**에 들어갈 수 있는 자료형 : Number, String, Boolean, Arra
 ### 2. 값들의 순서화 된 리스트 형식
 - 다양한 언어들에서 array, list로 실현되었다.
 
-&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp `[ value1, value2, ….. ]`
+`[ value1, value2, ….. ]`
 
 ```
 {
@@ -57,8 +57,8 @@ _💡**value**에 들어갈 수 있는 자료형 : Number, String, Boolean, Arra
   "hobby": ["listening music","watching movies"]
 }
 ```
-[참조](https://nesoy.github.io/articles/2017-02/JSON)
-[참조](https://velog.io/@ym1085/JSON-%EC%82%AC%EC%9A%A9%EB%B2%95)
+[참조1](https://nesoy.github.io/articles/2017-02/JSON)
+[참조2](https://velog.io/@ym1085/JSON-%EC%82%AC%EC%9A%A9%EB%B2%95)
 # parsing
  컴퓨터 분야에서 `JSON` , `XML` , `HTML` 등으로 구성된 데이터를 분석하여 내가 원하는 부분만 추출하고자 하는 것
  
