@@ -2,7 +2,7 @@
 layout: post
 title:  "Multipart/form-data"
 description: Django multipart/form-data
-date:   2021-00-03 22:12:36 +0530
+date:   2021-08-03 22:12:36 +0530
 categories: Django
 ---
 
