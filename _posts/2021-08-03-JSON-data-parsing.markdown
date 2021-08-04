@@ -3,7 +3,7 @@ layout: post
 title:  "JSON data parsing"
 description: Python_JSON data parsing
 date:   2021-08-03 22:21:40 +0530
-categories: Django Python
+categories: Django Python 
 ---
 
 

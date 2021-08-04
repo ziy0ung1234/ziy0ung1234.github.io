@@ -7,6 +7,7 @@ categories: Django Python DRF parser
 ---
 
 ✨  본 글은 [DRF 공식문서](https://www.django-rest-framework.org/api-guide/parsers/)를 바탕으로 작성하였습니다.
+
 # Parser
 파서(parser)란 파싱을 수행하는 프로그램을 의미하며 Django REST Framework는 다양한 미디어 유형의 request들을 승인할 수 있는 많은 내부 parser class들을 지원한다. 또한 우리가 파서를 정의하고 커스텀해서 사용할 수도 있어 API가 허용하는 미디어 유형들을 유연하게 다룰 수 있다.
 
