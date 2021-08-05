@@ -64,6 +64,25 @@ _💡**value**에 들어갈 수 있는 자료형 : Number, String, Boolean, Arra
  
 [참조](https://www.opentutorials.org/course/3718/25092)
  
+## json.loads
+`json.loads`는 JSON 데이터를 파이썬으로 디코딩 하는 중요 메서드로 아래 변환표처럼 s(JSON 문서를 포함하는 **str** , **bytes** , **bytearray** 인스턴스)를 파이썬 객체로 역직렬화(deserialize)한다.
+
+### 변환표
+
+| JSON | Python |
+|:----------|:----------:|
+| 오브젝트(object)| dict|
+| 배열(array)| list|
+| 문자열(string)| str|
+| 숫자(정수)| int|
+| 숫자(실수)| float|
+| true| True|
+| false| False|
+| null| None|
+
+[참조](https://docs.python.org/ko/3/library/json.html#json-to-py-table)
+
+디코드 할때 역직렬화되는 데이터가 유효한 JSON 문서가 아닐 경우에는, `JSONDecodeError`가 발생하기 때문에 에러 핸들링을 해주어야 한다.
 
 ## JSON(JavaScript Object Notation) 파싱
 
