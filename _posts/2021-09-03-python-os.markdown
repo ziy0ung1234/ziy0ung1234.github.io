@@ -1,0 +1,65 @@
+---
+layout: post
+title:  "Python_OS 모듈"
+description: python os 모듈
+date:   2021-09-03 13:11:00 +0530
+categories: Python os os.path.join os.walk
+---
+
+# os.walk()
+디렉토리 안의 특정 폴더 엑셀 파일 데이터를 파싱해야 해서 os 모듈의 필요한 함수들을 공부해보았다. `os.walk` 는 인자로 받은 경로의 디렉토리부터 그 하위 모든 디렉토리들을 차례대로 탐색하는 파이썬의 os 모듈이다.
+
+<span style="font-size:0.7em; color:gray">_os 모듈을 사용할때는 import os 해주어야한다._</span>
+
+💻 탐색할 파일의 구조
+```
+.
+├── EX
+│   └── ex.xls
+├── grade
+│   └── grade.xlsx
+├── overseas
+│   └── overseas
+│       └── 202009.xlsx
+└── tax.xlsx
+```
+
+`os.walk`는 모든 하위 폴더들을 for문으로 탐색하고, 인자로 전달된 path에 대해 3개의 tuple을 넘겨준다.
+
+	💡 path : 파일들이 들어있는 폴더 💡
+ 
+- **root  : dir과 files가 있는 path**
+- **dirs  : root 아래에 있는 폴더들**
+- **files : root 아래에 있는 파일들**
+
+# os.path.abspath(path)
+특정 경로에 대해 절대 경로 얻기
+
+```py
+print(os.path.abspath(dir_path)) # dir_path : 파싱해야 하는 path
+--------------------------------------------------------------
+# /tmp/tmp#####/09_2020/OVERSEAS/overseas
+```
+
+# os.path.splitext(file_name)
+확장자가 xlsx인 파일들만 가져와야 하기 때문에 확인하기 위해서 `splitext` 함수를 사용했다. `os.path.splitext` 는 확장자만 따로 분리해준다.
+```py
+ext = os.path.splitext(files[0])
+try:
+	print(f'files[0] : {files[0]})		# 202009.xlsx
+    print(f'ext : {ext}')			# .xlsx
+	assert ext == '.xlsx'
+except AssertionError:
+	raise AssertionError
+```
+# os.path.join()
+file명과 path명을 합치기 위해 사용한 함수이다. 인수로 전달된 2가지를 슬래쉬(`/`or`\`)로 결합해주어 path를 조작해준다.
+```py
+wb = load_workbook(filename=os.path.join(root, files[0]))
+print(f'file_path : {os.path.join(root, files[0])}')
+--------------------------------------------------------------
+# file_path : /tmp/tmp~~~/09_2020/OVERSEAS/overseas/202009.xlsx
+```
+## os.path.join()의 장점
+
+`os.path.join` 함수는 운영체제마다 다른 폴더 구분자를 각각에 알맞게 다뤄 경로를 생성한다. (윈도우: `\`, 리눅스:`/`)
